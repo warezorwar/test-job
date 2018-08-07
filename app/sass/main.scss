@@ -1,0 +1,543 @@
+@font-face {
+	font-family: ProximaNova-regular;
+	src: url(../fonts/ProximaNova-Regular.ttf);
+}
+@font-face {
+	font-family: ProximaNova-bold;
+	src: url(../fonts/ProximaNova-Bold.ttf);
+}
+@font-face {
+	font-family: Intro-regular;
+	src: url(../fonts/Intro.otf);
+}
+@font-face {
+	font-family: IntroBlack-italic;
+	src: url(../fonts/8442.ttf);
+}
+
+
+.header {
+    height:  56px;
+    display: flex;
+    justify-content: space-around;
+    &__logo {
+        display: flex;
+        color: #040404;
+        font-family: ProximaNova-regular, serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        &_description {
+            margin-left: 30px;
+            margin-top: 8px;
+            width: 200px;
+            font-size: 13px;
+            font-family: ProximaNova-regular, serif;
+        }
+    }
+    &__contact {
+        display: flex;
+        &_number {
+            font-family: ProximaNova-bold;
+            font-size: 35px;
+            margin-right: 17px;
+        }
+    }   
+}
+@media only screen and (max-width: 730px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 110px;
+        &__logo_description {
+            font-size: 10px;
+        }
+        &__contact_number {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+    }
+}
+
+
+.contact {
+    padding-top: 10px;
+}
+.button_text {
+    font-family: ProximaNova-bold;
+    font-size: 13px;
+    color: #fff;
+    position: relative;
+    bottom: 24px;
+    left: 10px;
+    cursor: pointer;
+}
+.content {
+        width: 40%;
+        height: 0;
+        border-top: 490px solid rgba(0, 0, 0, 0.3);
+	    border-right: 180px solid transparent;
+        position: absolute;
+        z-index: 10;
+        top: 80px;
+        &__line {
+            width: 4px;
+            height: 195px;
+            z-index: 20;
+            position: absolute;
+            top: -450px;
+            left: 210px;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: skew(-20deg);  
+        }
+        &__name {
+            width: 515px;
+            height: 112px;
+            z-index: 20;
+            position: absolute;
+            top: -450px;
+            left: 240px;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: skew(-20deg);        
+        }
+        &_text {
+            margin: 10px 20px 15px 20px;
+            font-family: Intro-regular;
+            font-size: 80px;
+            z-index: 30;
+            position: absolute;
+            top: -460px;
+            left: 225px;
+            }
+        &__for {
+            width: 290px;
+            height: 65px;
+            z-index: 20;
+            position: absolute;
+            top: -320px;
+            left: 200px;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: skew(-20deg);  
+            &-text {
+                z-index: 30;
+                position: absolute;
+                top: -320px;
+                left: 260px;
+                font-family: IntroBlack-italic;
+                font-size: 36px;
+            }
+            &-text:after {
+                width: 225px;
+                height: 5px;
+                background-color: #222222;
+                display: block;
+                content: " ";
+                margin: 1px auto;
+                position: relative;
+                right:  35px;
+            }
+        }
+        &__price {
+            width: 190px;
+            height: 50px;
+            z-index: 20;
+            position: absolute;
+            top: -310px;
+            left: 500px;
+            background-color: #068606;
+            transform: skew(-20deg);  
+            &_text {
+                width: 200px;
+                font-family: Intro-regular;
+                font-size: 16px;
+                position: absolute;
+                top: -322px;
+                left: 525px;
+                z-index: 35;
+                color: #ffffff;
+                span {
+                    font-size: 50px;
+                }
+            }            
+        }
+        &__description {
+            font-family: ProximaNova-bold;
+            font-size: 19px;
+            text-transform: uppercase;
+            color: #ffffff;
+            position: absolute;
+            top: -240px;
+            left: 225px;
+            z-index: 35;
+            width: 300px;
+        }
+        &__button {
+            position: absolute;
+            top: -180px;
+            left: 225px;
+            z-index: 35;
+            &_text {
+                width: 200px;
+                font-family: ProximaNova-bold;
+                font-size: 23px;
+                color: #ffffff;
+                text-transform: uppercase;
+                position: absolute;
+                top: -173px;
+                left: 243px;
+                z-index: 36;
+                cursor: pointer;
+            }
+        }
+}
+@media only screen and (max-width: 800px) {
+    .content {
+        &__line {
+            left: 40px;
+        }
+        &__name {
+            left: 70px;
+        }
+        &_text {
+            left: 55px;
+        }
+        &__for {
+            left: 30px;
+            &-text {
+                left: 90px;
+            }
+        }
+        &__price {
+            left: 330px;
+            &_text {
+                left: 355px;
+            }
+        }
+        &__description {
+            left: 55px;
+        }
+        &__button {
+            left: 55px;
+            &_text {
+                left: 73px;
+            }
+        }
+
+
+    }
+}
+@media only screen and (max-width: 610px) {
+    .content {
+        &__line {
+            width: 4px;
+            height: 103px;
+            z-index: 20;
+            position: absolute;
+            top: -450px;
+            left: 55px;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: skew(-20deg); 
+        }
+        &__name {
+            width: 250px;
+            height: 60px;
+            z-index: 20;
+            position: absolute;
+            top: -450px;
+            left: 70px;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: skew(-20deg);
+        }
+        &_text {
+            // margin: 10px 20px 15px 20px;
+            font-family: Intro-regular;
+            font-size: 38px;
+            z-index: 30;
+            position: absolute;
+            top: -460px;
+            left: 55px;
+        }
+        &__for {
+            width: 140px;
+            height: 33px;
+            z-index: 20;
+            position: absolute;
+            top: -380px;
+            left: 50px;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: skew(-20deg); 
+            &-text {
+                z-index: 30;
+                position: absolute;
+                top: -380px;
+                left: 90px;
+                font-family: IntroBlack-italic;
+                font-size: 16px;
+            }
+            &-text:after {
+                width: 125px;
+                height: 2px;
+                background-color: #222222;
+                display: block;
+                content: " ";
+                margin: 1px auto;
+                position: relative;
+                right:  35px;
+            }
+        }
+        &__price {
+            width: 80px;
+            height: 25px;
+            z-index: 20;
+            position: absolute;
+            top: -375px;
+            left: 200px;
+            background-color: #068606;
+            transform: skew(-20deg);  
+            &_text {
+                width: 200px;
+                font-family: Intro-regular;
+                font-size: 10px;
+                position: absolute;
+                top: -375px;
+                left: 205px;
+                z-index: 35;
+                color: #ffffff;
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__description {
+            font-family: ProximaNova-bold;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #ffffff;
+            position: absolute;
+            top: -340px;
+            left: 55px;
+            z-index: 35;
+            width: 150px;
+        }
+        &__button {
+            position: absolute;
+            top: -280px;
+            left: 55px;
+            z-index: 35;
+            img {
+                max-width: 150px;
+            }
+            &_text {
+                width: 200px;
+                font-family: ProximaNova-bold;
+                font-size: 13px;
+                color: #ffffff;
+                text-transform: uppercase;
+                position: absolute;
+                top: -273px;
+                left: 73px;
+                z-index: 36;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 360px) {
+    .content {
+        &__line {
+            left: 20px;
+        }
+        &__name {
+            left: 35px;
+        }
+        &_text {
+            left: 20px;
+        }
+        &__for {
+            left: 15px;
+            &-text {
+                left: 55px;
+            }
+        }
+        &__price {
+            left: 165px;
+            &_text {
+                left: 170px;
+            }
+        }
+        &__description {
+            left: 20px;
+        }
+        &__button {
+            left: 20px;
+            &_text {
+                left: 38px;
+            }
+        }
+
+    }
+
+}
+.footer {
+    height: 285px;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    right: 0px;
+    top: 571px;
+    padding-top: 15px;
+    img {
+        max-width: 100%;
+    }
+    &__caption {
+        font-family: ProximaNova-bold;
+        font-size: 22px;
+    }
+    &__text {
+        font-family: ProximaNova-regular;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .footer {
+        top: 625px;
+    }
+    .content {
+        top: 140px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .footer {
+        height: 685px;
+        top: 625px;
+        background-color: rgb(194, 188, 188);
+        &__caption {
+            margin-bottom: 20px;
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .footer__text {
+        display: none;
+    }
+}
+.navigation {
+    width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 5;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;    
+    transition: all .6s;
+    background-repeat:  no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#previous {
+    position: absolute;
+    left: 200px;
+    top: 55%;
+    margin-top: -20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+#previous:hover, #next:hover {
+    opacity: 1;
+}
+#previous:active {
+    margin-top: -18px;
+}
+#next:active {
+    margin-top: -18px;
+}
+#next {
+    position: absolute;
+    left: 400px;
+    top: 55%;
+    margin-top: -20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.nav {
+    position: absolute;
+    top: 54%;
+    left: 320px;
+    width: 100px;
+    margin-left: -50px;
+}
+.nav li {
+    // float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    position: relative;
+}
+@media only screen and (max-width: 500px) {
+    #previous {
+        // left: 100px;
+        left: 10%;
+    }
+    #next {
+        // left: 300px;
+        left: 50%;
+    }
+    .nav {
+        // left: 220px;
+        left: 36%;
+    }
+}
+
+.active {
+    background-color: #fff;
+}
+.up{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%px;
+    font-family: ProximaNova-regular;
+    color: #fff;
+}
+.up li{
+   margin: 2px 5px;
+   cursor: pointer;
+   font-size: 1.1em;
+   text-transform: uppercase;
+   margin-right: 130px;
+   font-size: 14px;
+  }
+@media only screen and (max-width: 980px) {
+    .up li {
+        margin-right: 40px;
+    }
+}
+@media only screen and (max-width: 604px) {
+    .up li {
+        margin-right: 5px;
+    }
+}
+@media only screen and (max-width: 464px) {
+    .up li {
+        margin-right: 0;
+        font-size:  12px;
+    }
+}
+.up li.active{
+    color: #FFFFFF;
+    background-color: transparent;
+    font-family: ProximaNova-bold;
+}
